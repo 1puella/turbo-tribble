@@ -1,0 +1,478 @@
+/* Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
+
+/* Variável global do CSS*/
+:root {
+  --cor-primaria: #0e0e10;
+  --cor-secundaria: #DBCBBD;
+  --cor-terciaria: #ef4993;
+
+  --fonte-primaria: "Krona One", sans-serif;
+  --fonte-secundaria: "Montserrat", sans-serif;
+
+  --tamanho-fonte-paragrafo: 1.5rem;
+}
+
+/* Reset CSS para normalizar visualização em diferentes navegadores*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* --------------------------------- HEADER ------------------------------ */
+
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+}
+
+.cabecalho {
+  padding: 4% 8% 0% 8%;
+}
+
+.cabecalho__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cabecalho__menu__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.cabecalho__menu__link {
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+  font-size: var(--tamanho-fonte-paragrafo);
+  color: var(--cor-terciaria);
+  text-decoration: none;
+}
+
+.cabecalho__menu__link:focus,
+.cabecalho__menu__link:hover {
+  text-decoration: underline;
+}
+
+.searchBar {
+  width: auto;
+  display: flex;
+}
+
+.searchTerm {
+  width: auto;
+  border: 3px solid var(--cor-terciaria);
+  background-color: var(--cor-primaria);
+  border-right: none;
+  padding: 0.45rem;
+  height: 1.5rem;
+  border-radius: 8px 0 0 8px;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-secundaria);
+  /*para o ícone*/
+  font-size: 1.25rem;
+}
+
+.searchButton {
+  /*recomendado pela WCAG que botões tenham mínimo 44px de altura e largura (equivale 2.75rem)e 8px de separação p outro botão */
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--cor-terciaria);
+  background: var(--cor-terciaria);
+  text-align: center;
+  color: var(--cor-primaria);
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+/*classe para ocultar textos descritivos feitos para leitor de tela*/
+.visuallyhidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+/* ----------------------- MAIN ------------------------------- */
+
+.apresentacao {
+  padding: 5% 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.apresentacao__conteudo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+  font-size: 2.25rem;
+  font-family: var(--fonte-primaria);
+}
+
+.tituloDestaque {
+  color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto {
+  font-size: var(--tamanho-fonte-paragrafo);
+  font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: var(--tamanho-fonte-paragrafo);
+}
+
+.apresentacao__links__link {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 70%;
+  text-align: center;
+  border: 2px solid var(--cor-terciaria);
+  border-radius: 8px;
+  font-size: var(--tamanho-fonte-paragrafo);
+  font-weight: 600;
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-secundaria);
+  padding: 21.5px 0;
+  text-decoration: none;
+
+  transition: all 150ms ease-in-out;
+}
+
+.apresentacao__links__link:hover {
+  transform: scale(1.05);
+  background-color: #1d1d20;
+}
+
+.apresentacao__links__link .fa-brands {
+  color: var(--cor-terciaria);
+}
+
+.apresentacao__imagem-container {
+  position: relative;
+  width: 50%;
+}
+
+.apresentacao__imagem {
+  width: 90%;
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.apresentacao__imagem-quadrado {
+  position: absolute;
+  z-index: 1;
+  top: -20px;
+  right: 25px;
+  width: 85%;
+  height: 90%;
+  border: 5px solid var(--cor-terciaria);
+  border-radius: 15px;
+}
+
+/*-----------------------FORMULARIO----------------------------*/
+
+.formulario {
+  padding: 5% 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.formulario__perguntas {
+  width: auto;
+  font-family: var(--fonte-secundaria);
+  font-size: var(--tamanho-fonte-paragrafo);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formulario__grupo {
+  border-radius: 10px;
+  border-color: var(--cor-terciaria);
+  padding: 2rem;
+}
+
+.formulario__grupo__titulo {
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.info-contato {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.info-contato .formulario__campo input {
+  width: 75%;
+}
+
+.formulario__campo {
+  margin-bottom: 1.5rem;
+  display: grid;
+}
+
+.campo-obrigatorio::after {
+  content: " * obrigatório";
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+/* --- radio --- */
+
+.form-radio {
+  display: flex;
+  margin-top: 0.7rem;
+}
+
+.radio-wrapper label {
+  cursor: pointer;
+}
+
+.radio-wrapper input[type="radio"] {
+  /*mantém acessível, display none esconde do leitor de tela*/
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 0.15rem solid var(--cor-secundaria);
+  border-radius: 50%;
+  transform: translateX(-0.5rem);
+  margin-left: 0.7rem;
+  cursor: pointer;
+}
+
+.radio-wrapper input[type="radio"]:checked {
+  background-image: radial-gradient(var(--cor-secundaria) 35%, var(--cor-primaria) 40%);
+}
+
+.radio-wrapper input[type="radio"]:focus,
+.checkbox-wrapper input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid var(--cor-terciaria);
+  outline-offset: max(2px, 0.15em);
+}
+
+.radio-wrapper+.radio-wrapper {
+  margin-left: 3rem;
+}
+
+/* --- text, select, textarea ---*/
+
+input,
+select,
+textarea {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+  border-radius: 8px;
+}
+
+.formulario__campo input[type="text"],
+.formulario__campo input[type="email"],
+.formulario__campo input[type="tel"],
+.formulario__campo select,
+.formulario__campo textarea {
+  padding: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+.formulario__campo input:not([type="radio"]):not([type="checkbox"]):focus,
+.formulario__campo select:focus,
+.formulario__campo textarea:focus {
+  background: #e9ded5;
+  outline: max(2px, 0.15em) solid var(--cor-terciaria);
+  outline-offset: max(2px, 0.15em);
+}
+
+.formulario__campo label[for="senioridade"] {
+  display: block;
+}
+
+/* --- checkbox --- */
+
+.formulario__campo input[type="checkbox"]+label {
+  cursor: pointer;
+}
+
+label+.checkbox-wrapper {
+  margin-top: 1rem;
+}
+
+.checkbox-wrapper+.checkbox-wrapper {
+  margin-top: 1rem;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.15rem solid var(--cor-secundaria);
+  border-radius: 0.3em;
+  transform: translateX(-0.5rem);
+  margin-left: 0.7rem;
+
+  position: relative;
+}
+
+/*cria a marcação do checkbox marcado mas só mostra no ::checked*/
+.checkbox-wrapper input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: scale(0);
+  background: none;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--cor-secundaria);
+  /* check mark clip path*/
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* --- botao --- */
+
+.formulario__botao {
+  width: fit-content;
+  background-color: var(--cor-terciaria);
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-primaria);
+  padding: 15px 8px;
+  cursor: pointer;
+}
+
+/* ----------------------- FOOTER ------------------------------- */
+
+.footer__content {
+  background-color: #1d1d20;
+  color: var(--cor-secundaria);
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3rem 5rem;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer__logo img {
+  width: 6rem;
+  border-radius: 50%;
+}
+
+.footer__logo,
+.footer__location,
+.footer__contact {
+  display: flex;
+  align-items: center;
+}
+
+.footer__text {
+  padding-left: 3rem;
+  display: inline-block;
+}
+
+.footer__text h2 {
+  font-size: var(--tamanho-fonte-paragrafo);
+  margin-bottom: 0.5rem;
+}
+
+.footer__content .fa-solid {
+  color: var(--cor-terciaria);
+  font-size: 2rem;
+}
+
+.footer__copyright {
+  color: var(--cor-primaria);
+  background-color: var(--cor-terciaria);
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* responsividade */
+
+@media (max-width: 1200px) {
+  .cabecalho {
+    padding: 10%;
+  }
+
+  .cabecalho__menu {
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  .searchTerm {
+    display: none;
+  }
+
+  .searchButton {
+    border-radius: 8px;
+  }
+
+  .apresentacao {
+    flex-direction: column-reverse;
+    padding: 8%;
+  }
+
+  .apresentacao__conteudo {
+    width: auto;
+  }
+
+  .info-contato {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form-radio {
+    flex-direction: column;
+  }
+
+  .radio-wrapper+.radio-wrapper {
+    margin: 0;
+  }
+
+  .footer__content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: flex-start;
+    row-gap: 2rem;
+    padding: 8% 15%;
+  }
+}

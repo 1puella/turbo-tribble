@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="./assets/favicon-VR.ico" type="image/x-icon">
+    <!-- CDN hospeda o Font Awesome para colocar ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <!-- link para pular ao conteúdo para acessibilidade-->
+            <a class="visuallyhidden" href="#article"> pular ao conteúdo </a>
+            <div class="cabecalho__menu__links">
+                <a class="cabecalho__menu__link" href="./index.html">Página Inicial</a>
+                <a class="cabecalho__menu__link" href="./about.html">Sobre nós</a>
+                <a class="cabecalho__menu__link" href="./form.html">Formulário</a>
+            </div>
+            <div class="searchBar">
+                <input type="text" class="searchTerm" placeholder="O que você procura?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search" title="Clique para pesquisar"></i>
+                    <!-- texto alternativo para botões sem texto -->
+                    <span class="visuallyhidden">Pesquisar</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 id="article" class="apresentacao__conteudo__titulo">
+                Um título de veras importante
+                <strong class="tituloDestaque">
+                    com algumas palavras impactantes!</strong>
+            </h1>
+            <p class="apresentacao__conteudo__texto">
+                Prepare-se para entrar em um mundo de infinitas possibilidades e descobertas com a inteligência
+                artificial (IA). Quer conhecer essa nova era tecnológica?
+            </p>
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__links__subtitulo">Acesse nossas redes:</h2>
+                <a class="apresentacao__links__link" href="https://instagram.com">
+                    <!-- aria-hidden=true faz com q elemento seja pulado pela tecnologia assistível-->
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    Instagram
+                </a>
+                <a class="apresentacao__links__link" href="https://github.com">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+                </a>
+                <a class="apresentacao__links__link" href="https://www.twitch.tv/">
+                    <i class="fa-brands fa-twitch" aria-hidden="true"></i>
+                    Twitch
+                </a>
+            </div>
+        </section>
+        <div class="apresentacao__imagem-container">
+            <div class="apresentacao__imagem-quadrado" aria-hidden="true"></div>
+            <img class="apresentacao__imagem" src="./assets/BrianPenny-pixabay.jpg"
+                alt="Ilustração realistica de mulher de pele escura com óculos de realidade virtual e roupa em neon e fundo azul.">
+        </div>
+    </main>
+    <footer>
+        <div class="footer__content">
+            <div class="footer__logo">
+                <!-- imagem relevante coloca tag img e alt. Imagem decorativa svg ou no css como background-image-->
+                <img src="./assets/logotipo_leonardo.jpg"
+                    alt="Logotipo de óculos realidade virtual com cores azul e roxa em neon">
+                <div class="footer__text">
+                    <h2>Empresa AI AI AI</h2>
+                    <p>Lema tal tal tal</p>
+                    <p>Valores da empresa</p>
+                </div>
+            </div>
+            <div class="footer__location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div class="footer__text">
+                    <h2>Localização</h2>
+                    <p>Rua tal. Bairro Tal. Cidade Tal. <br> Estado tal. País Tal. CEP Tal.</p>
+                </div>
+            </div>
+            <div class="footer__contact">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div class="footer__text">
+                    <h2>Contato</h2>
+                    <p>(XX) XXXXX-XXXX</p>
+                    <p>email@email.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <!-- colocar lang em pedaços para informar ao leitor de tela que está em outra língua -->
+            <p lang="en"> Random text in english about copyright.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

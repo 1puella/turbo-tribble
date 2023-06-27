@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="shortcut icon" href="./assets/favicon-VR.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="visuallyhidden" href="#article"> pular ao conteúdo </a>
+            <div class="cabecalho__menu__links">
+                <a class="cabecalho__menu__link" href="./index.html">Página Inicial</a>
+                <a class="cabecalho__menu__link" href="./about.html">Sobre nós</a>
+                <a class="cabecalho__menu__link" href="./form.html">Formulário</a>
+            </div>
+            <div class="searchBar">
+                <input type="text" class="searchTerm" placeholder="O que você procura?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search" title="Clique para pesquisar"></i>
+                    <span class="visuallyhidden">Pesquisar</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="formulario">
+        <div>
+            <h1 id="article" class="apresentacao__conteudo__titulo">Formulário</h1>
+            <p class="apresentacao__conteudo__texto">Conte-nos sobre suas expectativas e esperanças em relação a IA</p>
+        </div>
+        <!-- Início do formulário -->
+        <form class="formulario__perguntas">
+
+            <fieldset class="formulario__grupo">
+                <legend class="formulario__grupo__titulo">Informações de contato</legend>
+
+                <div class="info-contato">
+                    <div class="formulario__campo">
+                        <!-- FOR no label e ID no input linka os dois elementos juntos -->
+                        <label class="campo-obrigatorio" for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu primeiro nome" required>
+                    </div>
+
+                    <div class="formulario__campo">
+                        <label class="campo-obrigatorio" for="sobrenome">Sobrenome</label>
+                        <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="formulario__campo">
+                        <label class="campo-obrigatorio" for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="email@email.com" required>
+                    </div>
+
+                    <div class="formulario__campo">
+                        <label for="telefone">Telefone ou Celular</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                </div>
+
+
+                <div>
+                    <label>Como deveríamos entrar em contato com você?</label>
+                </div>
+                <div class="formulario__campo form-radio">
+                    <div class="radio-wrapper">
+                        <label>
+                            <input type="radio" name="contact-user" value="contact-call" checked>Ligação
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <label>
+                            <input type="radio" name="contact-user" value="contact-email">E-mail
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <label>
+                            <input type="radio" name="contact-user" value="contact-text-message">Mensagem de texto
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="formulario__grupo">
+                <legend class="formulario__grupo__titulo">Questionamentos sobre inteligência artificial</legend>
+
+                <div class="formulario__campo">
+                    <label for="senioridade">Qual seu nível de conhecimento sobre inteligência artificial?</label>
+                    <select id="senioridade" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option>Iniciante</option>
+                        <option>Intermediário</option>
+                        <option>Avançado</option>
+                        <option>Especialista</option>
+                    </select>
+                </div>
+
+
+                <div class="formulario__campo">
+                    <label>Quais são as suas principais expectativas em relação à
+                        IA?</label>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="expectativa1" name="expectativa1" value="produtividade">
+                        <label for="expectativa1">Melhoria da eficiência e produtividade</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="expectativa2" name="expectativa2" value="automacao">
+                        <label for="expectativa2">Automação de tarefas rotineiras</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="expectativa3" name="expectativa3" value="saude">
+                        <label for="expectativa3">Avanços na área da saúde</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="expectativa4" name="expectativa4" value="cliente">
+                        <label for="expectativa4">Melhoria da experiência do cliente</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="expectativa5" name="expectativa5" value="ciencia">
+                        <label for="expectativa5"> Exploração de novas fronteiras científicas</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="expectativa6" name="expectativa6" value="decisoes">
+                        <label for="expectativa6">Aprimoramento da tomada de decisões</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="expectativa7" name="expectativa7" value="negocio">
+                        <label for="expectativa7">Criação de novas oportunidades de negócios</label>
+                    </div>
+                </div>
+
+
+                <!-- Caixa de texto -->
+                <div class="formulario__campo">
+                    <label for="experiencia">Você já utiliza alguma aplicação de IA em sua empresa/organização? Se sim,
+                        descreva brevemente.</label>
+                    <textarea rows="6" id="experiencia" name="experiencia"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="formulario__botao" type="submit" onsubmit="">Concluído</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="./assets/logotipo_leonardo.jpg"
+                    alt="Logotipo de óculos realidade virtual com cores azul e roxa em neon">
+                <div class="footer__text">
+                    <h2>Empresa AI AI AI</h2>
+                    <p>Lema tal tal tal</p>
+                    <p>Valores da empresa</p>
+                </div>
+            </div>
+            <div class="footer__location">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div class="footer__text">
+                    <h2>Localização</h2>
+                    <p>Rua tal. Bairro Tal. Cidade Tal. <br> Estado tal. País Tal. CEP Tal.</p>
+                </div>
+            </div>
+            <div class="footer__contact">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div class="footer__text">
+                    <h2>Contato</h2>
+                    <p>(XX) XXXXX-XXXX</p>
+                    <p>email@email.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p lang="en"> Random text in english about copyright.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
