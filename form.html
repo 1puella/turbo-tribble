@@ -23,9 +23,8 @@
             </div>
             <div class="searchBar">
                 <input type="text" class="searchTerm" placeholder="O que você procura?">
-                <button type="submit" class="searchButton">
-                    <i class="fa fa-search" title="Clique para pesquisar"></i>
-                    <span class="visuallyhidden">Pesquisar</span>
+                <button type="submit" class="searchButton" title="Clique para pesquisar" aria-label="Pesquisar">
+                    <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
             </div>
         </nav>
@@ -45,16 +44,22 @@
                 <div class="info-contato">
                     <div class="formulario__campo">
                         <!-- FOR no label e ID no input linka os dois elementos juntos -->
-                        <label class="campo-obrigatorio" for="nome">Nome</label>
+                        <label for="nome">Nome
+                            <span class="campo-obrigatorio">* obrigatório</span>
+                        </label>
                         <input type="text" name="nome" id="nome" placeholder="Digite seu primeiro nome" required>
                     </div>
 
                     <div class="formulario__campo">
-                        <label class="campo-obrigatorio" for="sobrenome">Sobrenome</label>
+                        <label for="sobrenome">Sobrenome
+                            <span class="campo-obrigatorio">* obrigatório</span>
+                        </label>
                         <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
                     </div>
                     <div class="formulario__campo">
-                        <label class="campo-obrigatorio" for="email">Email</label>
+                        <label for="email">Email
+                            <span class="campo-obrigatorio">* obrigatório</span>
+                        </label>
                         <input type="email" name="email" id="email" placeholder="email@email.com" required>
                     </div>
 

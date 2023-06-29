@@ -237,8 +237,7 @@ body {
   display: grid;
 }
 
-.campo-obrigatorio::after {
-  content: " * obrigatório";
+.campo-obrigatorio {
   font-size: 1.1rem;
   opacity: 0.6;
 }
